@@ -61,14 +61,15 @@ public class NisseDemo {
     }
 
     public List<String> getChildrenList(List<Nisse> list, String name) {
-        String namein = name;
-        List<String> tempLf = new ArrayList<>();
+        Nisse nisse = null;
+        List<String> temp = new ArrayList<>();
         for (Nisse nis : list) {
             if (nis.getName().equalsIgnoreCase(name))
-                return getSublist(nis, tempLf);
-        } return null;
+                    nisse = nis;
+                
+        }return getSublist(nisse, temp);
 
-        }
+    }
 
     public void myMain(){
         List<Nisse> nisseList = crateNisseList();
